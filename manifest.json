@@ -1,0 +1,17 @@
+{
+  "name": "VibeFlow",
+  "short_name": "VibeFlow",
+  "description": "Your sound. Your mood.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1C1613",
+  "theme_color": "#E88D39",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "images/vibeflow-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

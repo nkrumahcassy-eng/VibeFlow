@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#E88D39">
+
+<link
+  rel="icon"
+  type="image/png"
+  href="images/vibeflow-icon.png"
+>
+
+  <title>VibeFlow</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="header">
+
+    <div class="logo">
+      Vibe<span>Flow</span>
+    </div>
+
+    <button class="profile-btn" id="profileTopBtn">
+      👤
+    </button>
+
+  </header>
+
+
+  <!-- MAIN -->
+
+  <main>
+
+    <!-- ================= HOME ================= -->
+
+    <div id="homeSection">
+
+      <section class="greeting">
+
+        <p>Good evening 👋</p>
+
+        <h1>Find your vibe.</h1>
+
+      </section>
+
+
+      <!-- FEATURED SONG -->
+
+      <section class="hero-song">
+
+        <div class="hero-content">
+
+          <p class="hero-label">
+            FEATURED FOR YOU
+          </p>
+
+          <h2>Midnight Vibes</h2>
+
+          <p class="hero-artist">
+            VibeFlow Artist
+          </p>
+
+          <button
+            class="hero-play"
+            onclick="playSong(0)"
+          >
+            ▶ Play now
+          </button>
+
+        </div>
+
+
+        <div class="hero-cover">
+
+          <img
+            src="images/midnight.jpg"
+            alt="Midnight Vibes"
+          >
+
+        </div>
+
+      </section>
+
+
+      <!-- TRENDING -->
+
+      <section class="section">
+
+        <div class="section-title">
+
+          <h2>Trending now</h2>
+
+          <button>See all</button>
+
+        </div>
+
+
+        <div class="music-list">
+
+
+          <!-- SONG 1 -->
+
+          <div class="music-card">
+
+            <div class="album">
+
+              <img
+                src="images/midnight.jpg"
+                alt="Midnight Vibes"
+              >
+
+            </div>
+
+
+            <div class="song-info">
+
+              <h3>Midnight Vibes</h3>
+
+              <p>VibeFlow Artist</p>
+
+            </div>
+
+
+            <div class="card-actions">
+
+  <button
+    class="play-btn"
+    onclick="playSong(0)"
+  >
+    ▶
+  </button>
+
+  <button
+    class="favorite-btn"
+  >
+    ♡
+  </button>
+
+  <button
+    class="add-playlist-btn"
+    onclick="openPlaylistPicker(0)"
+  >
+    ⋯
+  </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- SONG 2 -->
+
+          <div class="music-card">
+
+            <div class="album">
+
+              <img
+                src="images/after-hours.jpg"
+                alt="After Hours"
+              >
+
+            </div>
+
+
+            <div class="song-info">
+
+              <h3>After Hours</h3>
+
+              <p>VibeFlow Artist</p>
+
+            </div>
+
+
+            <div class="card-actions">
+
+  <button
+    class="play-btn"
+    onclick="playSong(1)"
+  >
+    ▶
+  </button>
+
+  <button
+    class="favorite-btn"
+  >
+    ♡
+  </button>
+
+  <button
+    class="add-playlist-btn"
+    onclick="openPlaylistPicker(1)"
+  >
+    ⋯
+  </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- SONG 3 -->
+
+          <div class="music-card">
+
+            <div class="album">
+
+              <img
+                src="images/golden-nights.jpg"
+                alt="Golden Nights"
+              >
+
+            </div>
+
+
+            <div class="song-info">
+
+              <h3>Golden Nights</h3>
+
+              <p>VibeFlow Artist</p>
+
+            </div>
+
+
+            <div class="card-actions">
+
+  <button
+    class="play-btn"
+    onclick="playSong(2)"
+  >
+    ▶
+  </button>
+
+  <button
+    class="favorite-btn"
+  >
+    ♡
+  </button>
+
+  <button
+    class="add-playlist-btn"
+    onclick="openPlaylistPicker(2)"
+  >
+    ⋯
+  </button>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+      <!-- MADE FOR YOU -->
+      <!-- ===============================
+     BROWSE BY MOOD
+     =============================== -->
+
+<section class="mood-section">
+
+  <div class="section-title">
+
+    <h2>Browse by Mood</h2>
+
+  </div>
+
+
+  <div class="mood-grid">
+
+    <button
+      class="mood-card"
+      data-mood="soul"
+    >
+      <span>☕</span>
+
+      <div>
+        <h3>Sunday Soul</h3>
+        <p>Warm acoustic & soul</p>
+      </div>
+    </button>
+
+
+    <button
+      class="mood-card"
+      data-mood="gospel"
+    >
+      <span>✝</span>
+
+      <div>
+        <h3>Gospel & Grace</h3>
+        <p>Peaceful gospel sounds</p>
+      </div>
+    </button>
+
+
+    <button
+      class="mood-card"
+      data-mood="late-night"
+    >
+      <span>🌙</span>
+
+      <div>
+        <h3>Late Night</h3>
+        <p>Slow & atmospheric</p>
+      </div>
+    </button>
+
+
+    <button
+      class="mood-card"
+      data-mood="energy"
+    >
+      <span>🌻</span>
+
+      <div>
+        <h3>Good Energy</h3>
+        <p>Feel-good tracks</p>
+      </div>
+    </button>
+
+  </div>
+
+</section>
+
+      <section class="section">
+
+        <div class="section-title">
+
+          <h2>Made for you</h2>
+
+        </div>
+
+
+        <div class="featured-card">
+
+          <div class="featured-art">
+            🎧
+          </div>
+
+
+          <div>
+
+            <p>YOUR DAILY MIX</p>
+
+            <h2>Chill & R&B</h2>
+
+            <p>
+              Relax, breathe and enjoy your favorite vibes.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <section
+      id="searchSection"
+      class="search-section"
+    >
+
+      <div class="search-heading">
+
+        <p>DISCOVER</p>
+
+        <h1>Find your sound.</h1>
+
+        <span>
+          Search for songs, artists and more.
+        </span>
+
+      </div>
+
+
+      <div class="search-box">
+
+        <span>🔎</span>
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search songs, artists..."
+          autocomplete="off"
+        >
+
+      </div>
+
+
+      <section
+        id="searchResults"
+        class="search-results"
+      ></section>
+
+    </section>
+
+
+    <!-- ================= LIBRARY ================= -->
+
+    <section
+      id="librarySection"
+      class="library-section"
+    >
+
+      <div class="library-header">
+
+        <h1>❤️ Your Library</h1>
+
+        <p>
+          Your favorite songs in one place.
+        </p>
+
+      </div>
+
+
+      <div id="librarySongs"></div>
+
+    </section>
+
+
+    <!-- ================= PROFILE ================= -->
+
+    <section
+      id="profileSection"
+      class="profile-section"
+    >
+
+      <div class="profile-top">
+
+        <div class="profile-avatar">
+          👤
+        </div>
+
+
+        <div>
+
+          <p class="profile-label">
+            VIBEFLOW MEMBER
+          </p>
+
+          <h1>Your Profile</h1>
+
+          <p class="profile-subtitle">
+            Welcome to your music world.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROFILE STATS -->
+
+      <div class="profile-stats">
+
+        <div class="stat-card">
+
+          <strong id="favoriteCount">
+            0
+          </strong>
+
+          <span>Favorites</span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <strong>3</strong>
+
+          <span>Songs</span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <strong>1</strong>
+
+          <span>Playlist</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROFILE MENU -->
+
+      <div class="profile-menu">
+
+        <button>
+
+          <span>🎵</span>
+
+          <div>
+
+            <strong>My Music</strong>
+
+            <small>
+              Your saved music
+            </small>
+
+          </div>
+
+          <b>›</b>
+
+        </button>
+
+
+        <button>
+
+          <span>📂</span>
+
+          <div>
+
+            <strong>My Playlists</strong>
+
+            <small>
+              Create and manage playlists
+            </small>
+
+          </div>
+
+          <b>›</b>
+
+        </button>
+
+
+        <button>
+
+          <span>⚙️</span>
+
+          <div>
+
+            <strong>Settings</strong>
+
+            <small>
+              Customize VibeFlow
+            </small>
+
+          </div>
+
+          <b>›</b>
+
+        </button>
+
+      </div>
+
+    </section>
+    <!-- PLAYLIST PAGE -->
+
+<section
+  id="playlistPage"
+  class="playlist-page"
+>
+
+  <button
+    id="backToProfile"
+    class="back-playlist"
+  >
+    ← Back
+  </button>
+
+  <div class="playlist-page-header">
+
+    <div class="playlist-page-cover">
+      🎧
+    </div>
+
+    <div>
+
+      <p>PLAYLIST</p>
+
+      <h1 id="playlistPageName">
+        My Playlist
+      </h1>
+
+      <span id="playlistPageCount">
+        0 songs
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <div
+    id="playlistPageSongs"
+    class="playlist-page-songs"
+  ></div>
+
+</section>
+    
+    <!-- PLAYLISTS -->
+
+<div class="playlist-area">
+
+  <div class="playlist-heading">
+
+    <div>
+      <p>YOUR COLLECTION</p>
+      <h2>My Playlists</h2>
+    </div>
+
+    <button
+      id="createPlaylistBtn"
+      class="create-playlist-btn"
+    >
+      + Create
+    </button>
+
+  </div>
+
+
+  <div
+    id="playlistList"
+    class="playlist-list"
+  ></div>
+
+</div>
+
+
+<!-- CREATE PLAYLIST MODAL -->
+
+<div
+  id="playlistModal"
+  class="playlist-modal"
+>
+
+  <div class="playlist-modal-box">
+
+    <button
+      id="closePlaylistModal"
+      class="close-modal"
+    >
+      ×
+    </button>
+
+    <p>NEW PLAYLIST</p>
+
+    <h2>Create a playlist</h2>
+
+    <input
+      type="text"
+      id="playlistName"
+      placeholder="Playlist name"
+      maxlength="30"
+    >
+
+    <button
+      id="savePlaylistBtn"
+      class="save-playlist-btn"
+    >
+      Create Playlist
+    </button>
+
+  </div>
+
+</div>
+    <!-- NOW PLAYING -->
+
+<section
+  id="nowPlayingPage"
+  class="now-playing-page"
+>
+
+  <button
+    id="closeNowPlaying"
+    class="now-playing-back"
+  >
+    ↓
+  </button>
+
+
+  <p class="now-playing-label">
+    NOW PLAYING
+  </p>
+
+
+  <div class="now-playing-art">
+    <img
+      id="nowPlayingCover"
+      src=""
+      alt="Album artwork"
+    >
+  </div>
+
+
+  <div class="now-playing-info">
+
+    <h1 id="nowPlayingTitle">
+      Nothing playing
+    </h1>
+
+    <p id="nowPlayingArtist">
+      Choose a song to begin
+    </p>
+
+  </div>
+
+
+  <div class="now-playing-progress">
+
+    <input
+      type="range"
+      id="nowPlayingProgress"
+      min="0"
+      max="100"
+      value="0"
+    >
+
+    <div class="now-playing-times">
+
+      <span id="nowPlayingCurrent">
+        0:00
+      </span>
+
+      <span id="nowPlayingDuration">
+        0:00
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <div class="now-playing-controls">
+
+    <button id="nowPlayingPrev">
+      ◀◀
+    </button>
+
+    <button
+      id="nowPlayingPlay"
+      class="now-playing-main"
+    >
+      ▶
+    </button>
+
+    <button id="nowPlayingNext">
+      ▶▶
+    </button>
+
+  </div>
+
+</section>
+
+  </main>
+
+
+  <!-- ================= MUSIC PLAYER ================= -->
+
+  <div class="player" id="miniPlayer">
+
+    <div class="player-song">
+
+      <div
+        class="mini-album"
+        id="playerAlbum"
+      ></div>
+
+
+      <div>
+
+        <strong id="playerTitle">
+          Nothing playing
+        </strong>
+
+        <small id="playerArtist">
+          Choose a song
+        </small>
+
+      </div>
+
+    </div>
+
+
+    <div class="player-controls">
+
+      <div class="progress-container">
+
+        <span id="currentTime">
+          0:00
+        </span>
+
+        <input
+          type="range"
+          id="progress"
+          min="0"
+          max="100"
+          value="0"
+        >
+
+        <span id="duration">
+          0:00
+        </span>
+
+      </div>
+
+
+      <div class="control-buttons">
+
+        <button id="prevBtn">
+          ⏮
+        </button>
+
+        <button id="mainPlay">
+          ▶
+        </button>
+
+        <button id="nextBtn">
+          ⏭
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+  
+  <!-- PLAYLIST PICKER -->
+
+<div
+  id="playlistPicker"
+  class="playlist-picker"
+>
+
+  <div class="playlist-picker-box">
+
+    <button
+      id="closePicker"
+      class="close-modal"
+    >
+      ×
+    </button>
+
+    <p>ADD TO PLAYLIST</p>
+
+    <h2>Choose a playlist</h2>
+
+    <div id="pickerPlaylists"></div>
+
+  </div>
+
+</div>
+
+
+  <!-- AUDIO -->
+
+  <audio id="audioPlayer"></audio>
+
+
+  <!-- ================= BOTTOM NAV ================= -->
+
+  <nav class="bottom-nav">
+
+    <button
+      class="nav-item active"
+      id="homeNav"
+    >
+
+      🏠
+
+      <span>Home</span>
+
+    </button>
+
+
+    <button
+      class="nav-item"
+      id="searchNav"
+    >
+
+      🔎
+
+      <span>Search</span>
+
+    </button>
+
+
+    <button
+      class="nav-item"
+      id="libraryNav"
+    >
+
+      ❤️
+
+      <span>Library</span>
+
+    </button>
+
+
+    <button
+      class="nav-item"
+      id="profileNav"
+    >
+
+      👤
+
+      <span>Profile</span>
+
+    </button>
+
+  </nav>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
